@@ -1,0 +1,32 @@
+.popup {
+  width: 552px;
+  min-height: 476px;
+  max-height: 740px;
+  position: relative;
+  padding: 32px;
+
+  background: #FFFFFF;
+  border-radius: 30px;
+  &__close {
+    position: absolute;
+    top: 27px;
+    line-height: 10px;
+    right: 27px;
+    font-size: 40px;
+    color: #EA0029;
+    cursor: pointer;
+  }
+  &__title {
+    color: #000;
+    font-size: 28px;
+    font-weight: 600;
+  }
+  &__subtitle {
+    color: #808080;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+
+    margin-top: 16px;
+  }
+}

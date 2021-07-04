@@ -1,0 +1,19 @@
+.page-start {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(255.35deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #FF5E56;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-popup {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,26 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="page-start"  v-if="!popupActive">
+    <button class="button-start" @click="popupActive = true">Налоговый вычет</button>
+  </div>
+  <the-pop-up
+    :popup-active="popupActive"
+    @close-popup="popupActive = false"
+  ></the-pop-up>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { ref } from 'vue'
+import ThePopUp from './components/ThePopUp'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  setup () {
+    const popupActive = ref(false)
+
+    return {
+      popupActive
+    }
+  },
+  components: { ThePopUp }
 }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style>
+
 </style>
